@@ -67,4 +67,64 @@
       border-color: #2C5CB8;
     }
   }
+
+  .resp-sharing-button--facebook {
+    background-color: #1877F2;
+    border-color: #1877F2;
+    color: #fff;
+
+    &:hover,
+    &:active {
+      background-color: #0d65d9;
+      border-color: #0d65d9;
+    }
+  }
+
+  .resp-sharing-button--email {
+    background-color: #777777;
+    border-color: #777777;
+    color: #fff;
+
+    &:hover,
+    &:active {
+      background-color: #5e5e5e;
+      border-color: #5e5e5e;
+    }
+  }
+
+  .resp-sharing-button--whatsapp {
+    background-color: #25D366;
+    border-color: #25D366;
+    color: #fff;
+
+    &:hover,
+    &:active {
+      background-color: #1da851;
+      border-color: #1da851;
+    }
+  }
+
+  .resp-sharing-button--hackernews {
+    background-color: #FF6600;
+    border-color: #FF6600;
+    color: #fff;
+
+    &:hover,
+    &:active {
+      background-color: #d95500;
+      border-color: #d95500;
+    }
+  }
+
+  .resp-sharing-button--telegram {
+    background-color: #0088CC;
+    border-color: #0088CC;
+    color: #fff;
+
+    &:hover,
+    &:active {
+      background-color: #006ba6;
+      border-color: #006ba6;
+    }
+  }
 }
