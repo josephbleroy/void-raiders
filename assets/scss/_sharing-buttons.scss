@@ -17,7 +17,7 @@
     border-radius: 5px;
     transition: 25ms ease-out;
     padding: 0.5em 0.75em;
-    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   }
 
   .resp-sharing-button__icon svg {
@@ -30,5 +30,41 @@
   .resp-sharing-button--small svg {
     margin: 0;
     vertical-align: middle;
+  }
+
+  .resp-sharing-button--x {
+    background-color: #000000;
+    border-color: #000000;
+    color: #fff;
+
+    &:hover,
+    &:active {
+      background-color: #222;
+      border-color: #222;
+    }
+  }
+
+  .resp-sharing-button--mastodon {
+    background-color: #6364FF;
+    border-color: #6364FF;
+    color: #fff;
+
+    &:hover,
+    &:active {
+      background-color: #563ACC;
+      border-color: #563ACC;
+    }
+  }
+
+  .resp-sharing-button--signal {
+    background-color: #3A76F0;
+    border-color: #3A76F0;
+    color: #fff;
+
+    &:hover,
+    &:active {
+      background-color: #2C5CB8;
+      border-color: #2C5CB8;
+    }
   }
 }
