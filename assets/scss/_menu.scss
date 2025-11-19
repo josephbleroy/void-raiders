@@ -1,23 +1,5 @@
 .menu {
   z-index: 9999;
-  // Default
-  background: $light-background-header;
-
-  @media (prefers-color-scheme: dark) {
-    background: $dark-background-header;
-  }
-
-  @media (prefers-color-scheme: light) {
-    background: $light-background-header;
-  }
-
-  [data-theme=dark] & {
-    background: $dark-background-header;
-  }
-
-  [data-theme=light] & {
-    background: $light-background-header;
-  }
 
   @media #{$media-size-phone} {
     position: absolute;
@@ -71,9 +53,10 @@
     display: inline-block;
     margin-right: 15px;
     text-decoration: none;
+    transition: opacity 0.2s ease;
 
     &:hover {
-      text-decoration: underline;
+      opacity: 0.7;
     }
 
     &:last-of-type {
@@ -84,24 +67,6 @@
 
 
 .submenu {
-  background: $light-background-header;
-
-  @media (prefers-color-scheme: dark) {
-    background: $dark-background-header;
-  }
-
-  @media (prefers-color-scheme: light) {
-    background: $light-background-header;
-  }
-
-  [data-theme=dark] & {
-    background: $dark-background-header;
-  }
-
-  [data-theme=light] & {
-    background: $light-background-header;
-  }
-
   ul {
     list-style-type: none;
     margin: 0;
@@ -109,7 +74,8 @@
     overflow: hidden;
   }
 
-  li a, .dropbtn {
+  li a,
+  .dropbtn {
     display: inline-block;
     text-decoration: none;
   }
@@ -121,19 +87,6 @@
   .dropdown-content {
     display: none;
     position: absolute;
-    background: $dark-background-header;
-
-    @media (prefers-color-scheme: light) {
-      background: $light-background-header;
-    }
-    
-    [data-theme=dark] & {
-      background: $dark-background-header;
-    }
-  
-    [data-theme=light] & {
-      background: $light-background-header;
-    }
   }
 
   .dropdown-content a {
@@ -141,21 +94,10 @@
     text-decoration: none;
     display: block;
     text-align: left;
-  }
+    transition: opacity 0.2s ease;
 
-  .dropdown-content a:hover {
-    background: $dark-background-header;
-    
-    @media (prefers-color-scheme: light) {
-      background: $light-background-header;
-    }
-
-    [data-theme=dark] & {
-      background: $dark-background-header;
-    }
-  
-    [data-theme=light] & {
-      background: $light-background-header;
+    &:hover {
+      opacity: 0.7;
     }
   }
 
