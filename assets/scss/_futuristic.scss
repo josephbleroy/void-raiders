@@ -1,0 +1,105 @@
+/* Futuristic / Cyberpunk Additions */
+
+/* Glassmorphism Mixin */
+@mixin glassmorphism($opacity: 0.7, $blur: 10px) {
+    background: rgba(255, 255, 255, $opacity);
+    backdrop-filter: blur($blur);
+    -webkit-backdrop-filter: blur($blur);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    [data-theme=dark] & {
+        background: rgba(20, 20, 20, $opacity);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+}
+
+/* Glowing Text */
+.glow-text {
+    text-shadow: 0 0 5px currentColor;
+}
+
+/* Neon Border */
+.neon-border {
+    box-shadow: 0 0 5px currentColor, inset 0 0 5px currentColor;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: $light-background;
+
+    [data-theme=dark] & {
+        background: $dark-background;
+    }
+}
+
+::-webkit-scrollbar-thumb {
+    background: $light-color-secondary;
+    border-radius: 4px;
+
+    [data-theme=dark] & {
+        background: $dark-color-secondary;
+    }
+
+    &:hover {
+        background: $light-color-variant;
+
+        [data-theme=dark] & {
+            background: $dark-color-variant;
+        }
+    }
+}
+
+/* Animations */
+@keyframes pulse-glow {
+    0% {
+        box-shadow: 0 0 5px currentColor;
+    }
+
+    50% {
+        box-shadow: 0 0 20px currentColor;
+    }
+
+    100% {
+        box-shadow: 0 0 5px currentColor;
+    }
+}
+
+.animate-pulse-glow {
+    animation: pulse-glow 2s infinite;
+}
+
+/* Apply Glassmorphism to Header */
+.navigation {
+    @include glassmorphism(0.8, 15px);
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease;
+
+    &:hover {
+        border-bottom-color: $light-color-variant;
+
+        [data-theme=dark] & {
+            border-bottom-color: $dark-color-variant;
+        }
+    }
+}
+
+/* Card/Post Styling Enhancements */
+.post {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 8px;
+    padding: 10px;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+        [data-theme=dark] & {
+            box-shadow: 0 5px 15px rgba(0, 255, 157, 0.1);
+            /* Hint of neon green */
+        }
+    }
+}
