@@ -11,60 +11,16 @@
   .resp-sharing-button__link {
     text-decoration: none;
     margin: 0.5em;
-  }
+    transition: opacity 0.2s ease;
 
-  .resp-sharing-button {
-    border-radius: 5px;
-    transition: 25ms ease-out;
-    padding: 0.5em 0.75em;
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    &:hover {
+      opacity: 0.7;
+    }
   }
 
   .resp-sharing-button__icon svg {
-    width: 1em;
-    height: 1em;
-    margin-right: 0.4em;
-    vertical-align: top;
-  }
-
-  .resp-sharing-button--small svg {
-    margin: 0;
+    width: 1.5em;
+    height: 1.5em;
     vertical-align: middle;
-  }
-
-  .resp-sharing-button--x {
-    background-color: #000000;
-    border-color: #000000;
-    color: #fff;
-
-    &:hover,
-    &:active {
-      background-color: #222;
-      border-color: #222;
-    }
-  }
-
-  .resp-sharing-button--mastodon {
-    background-color: #6364FF;
-    border-color: #6364FF;
-    color: #fff;
-
-    &:hover,
-    &:active {
-      background-color: #563ACC;
-      border-color: #563ACC;
-    }
-  }
-
-  .resp-sharing-button--signal {
-    background-color: #3A76F0;
-    border-color: #3A76F0;
-    color: #fff;
-
-    &:hover,
-    &:active {
-      background-color: #2C5CB8;
-      border-color: #2C5CB8;
-    }
   }
 }
