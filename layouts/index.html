@@ -24,6 +24,12 @@
                     {{ partial "social-icons.html" . }}
                 </div>
                 {{- end }}
+
+                {{- if .Content }}
+                <div class="home-content">
+                    {{ .Content }}
+                </div>
+                {{- end }}
             </div>
         </main>
     </div>
